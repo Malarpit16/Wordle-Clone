@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --keyColor: #8eaeeb;
+    --keyBorder: #222d42;
+    --keyBackground: #2c3c4d;
+    --letterBackground: #1d2a38;
+    --letterBorder: #2d3c58;
+    --background: #222831;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--background);
+    margin: 3.5rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(1, 340px);
+    grid-template-rows: repeat(6, 62px);
+    justify-self: start;
+    gap: 7.5px;
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(5, 62px);
+    grid-template-rows: repeat(1, 62px);
+    gap: 7.5px;
+}
+
+
+
+.letter {
+    height: 62px;
+    width: 62px;
+    background-color: var(--letterBackground);
+    border-radius: 5px;
+    border: 3px solid var(--letterBorder);
+}
+
+
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+
+.keyRow {
+    display: flex;
+}
+.key {
+    margin: 4px;
+    height: 68px;
+    width: 54px;
+    background-color: var(--keyBackground);
+    border-radius: 5px;
+    border: 5px solid var(--keyBorder);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.20rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--keyColor);
+}
+
+.homeRow {
+    margin: 0 27px 0 27px;
+}
+
+.enter, .backspace {
+    width: 80px;
+}
+  
+  
+input:focus {
+    outline: none;
+   
+}
+input:hover {
+    cursor: default;
+}
+
+input {
+    text-align: center;
+    font-size: 2rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: var(--keyColor);
+    caret-color: transparent;
+    text-transform: uppercase;
+}
